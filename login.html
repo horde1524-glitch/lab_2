@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-wrapper">
+        <form action="#" method="post" class="login-form">
+            <h2>Авторизация</h2>
+
+            <div class="form-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login"
+                       placeholder="Введите логин" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password"
+                       placeholder="Введите пароль" required autocomplete="current-password">
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    <span>Запомнить меня</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Войти</button>
+
+            <p class="register-link">
+                Нет аккаунта? <a href="index.html">Оставить заявку</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

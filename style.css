@@ -1,0 +1,235 @@
+/* ===== Базовые настройки ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+    color: #2d2d2d;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* ========== СТРАНИЦА ОБРАТНОЙ СВЯЗИ ========== */
+.feedback-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.feedback-wrapper {
+    background: #ffffff;
+    max-width: 640px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.feedback-wrapper h1 {
+    font-size: 28px;
+    color: #4a3f95;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+/* ===== Общие элементы форм ===== */
+.form-group {
+    margin-bottom: 20px;
+    border: none;
+}
+
+.form-group > label,
+.form-group > legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #4a3f95;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Радио и чекбоксы */
+.radio,
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    padding: 6px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+.radio input,
+.checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+/* Кнопка */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.login-link,
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.login-link a,
+.register-link a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Вложение файла */
+input[type="file"] {
+    font-size: 14px;
+    padding: 10px;
+    border: 2px dashed #d0d0d0;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    background: #fafafa;
+}
+
+input[type="file"]:hover {
+    border-color: #667eea;
+}
+
+/* ========== СТРАНИЦА АУТЕНТИФИКАЦИИ ========== */
+.login-page {
+    /* Фоновое изображение на весь экран */
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Центрирование формы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Полупрозрачный тёмный слой поверх картинки для контраста */
+.login-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.login-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.login-form h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #4a3f95;
+    margin-bottom: 24px;
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 480px) {
+    .feedback-wrapper,
+    .login-form {
+        padding: 24px 18px;
+    }
+
+    .feedback-wrapper h1 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="feedback-page">
+
+    <div class="feedback-wrapper">
+        <h1>Форма обратной связи</h1>
+        <p class="subtitle">Мы рады любому вашему сообщению</p>
+
+        <form action="#" method="post" enctype="multipart/form-data" class="feedback-form">
+
+            <!-- ФИО -->
+            <div class="form-group">
+                <label for="fio">ФИО <span class="required">*</span></label>
+                <input type="text" id="fio" name="fio"
+                       placeholder="Иванов Иван Иванович" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email"
+                       placeholder="example@mail.ru" required>
+            </div>
+
+            <!-- Откуда узнали (радио) -->
+            <fieldset class="form-group">
+                <legend>Откуда вы узнали о нас?</legend>
+                <label class="radio">
+                    <input type="radio" name="source" value="internet" checked>
+                    <span>Из интернета</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="source" value="friends">
+                    <span>От друзей</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="source" value="advertising">
+                    <span>Реклама</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="source" value="other">
+                    <span>Другое</span>
+                </label>
+            </fieldset>
+
+            <!-- Тип обращения (селектор) -->
+            <div class="form-group">
+                <label for="type">Тип обращения</label>
+                <select id="type" name="type">
+                    <option value="complaint">Жалоба</option>
+                    <option value="suggestion" selected>Предложение</option>
+                </select>
+            </div>
+
+            <!-- Сообщение -->
+            <div class="form-group">
+                <label for="message">Текст сообщения <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6"
+                          placeholder="Опишите вашу ситуацию..." required></textarea>
+            </div>
+
+            <!-- Вложение -->
+            <div class="form-group">
+                <label for="file">Вложение</label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <!-- Согласие -->
+            <div class="form-group checkbox-group">
+                <label class="checkbox">
+                    <input type="checkbox" name="consent" required>
+                    <span>Даю согласие на обработку персональных данных <span class="required">*</span></span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить</button>
+        </form>
+
+        <p class="login-link">
+            Уже есть аккаунт? <a href="login.html">Войти</a>
+        </p>
+    </div>
+
+</body>
+</html>
